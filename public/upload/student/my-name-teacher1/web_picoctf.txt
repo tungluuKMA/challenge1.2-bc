@@ -1,0 +1,2 @@
+.htacess quản lý quyền của máy chủ apache
+.DS_Store (of apple Mac):  lưu trữ các cấu hình về giao diện của màn hình

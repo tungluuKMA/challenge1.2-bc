@@ -1,0 +1,28 @@
+- Admin: Quản lý các sản phẩm, quản lý user, quản lý đơn hàng
+	+ Quản lý sản phẩm: CRUD
+	+ Quản lý user: CRD(password sẽ được mã hoá kể cả admin cũng không được xem)
+	+ Quản lý đơn hàng: Xác nhận, xoá, huỷ đơn hàng, thống kê những đơn hàng hoàn thành
+	(Session) 
+
+- User: Đăng nhập, đăng ký, quên mật khẩu, shopping cart, thanh toán, tìm kiếm sản phẩm
+	+ Đăng nhập: đăng nhập với tài khoản đăng ký, đăng nhập facebook/google
+	+ Quên mật khẩu: có email gửi đường dẫn về Hiển thị thông báo: Nếu email đã đăng ký tài khoản rồi thì vui lòng kiểm tra hộp thư của bạn
+	+ Shoppingcart: Thêm, sửa, xoá, tăng giảm(Javascript), tổng tiền
+	+ Thanh toán: COD, (Paypal)
+	+ Tìm kiếm sản phẩm
+	(Session, API: Đăng nhập với facebook/google + Thanh toán bằng paypal)
+
+
+Mã hoá cơ sở dữ liệu: sử dụng Store-proceduce, trigger
+
+
+
+user: id(increment), username, password, address, phone_number, email, gender
+product: id, price, img, name, description
+cart: cart_id, user_id, quantity
+admin: 
+order: order_id, user_id, user_address, user_email, user_phonenumber, total_price, product_id, payment_method, quantity
+
+
+User: Tùng(Đăng nhập, đăng ký, quên mật khẩu, session), (Cart+Thanh toán)
+Admin: Thiện(Quản lý đơn hàng), (Quản lý sản phẩm), Tiến(Quản lý user)

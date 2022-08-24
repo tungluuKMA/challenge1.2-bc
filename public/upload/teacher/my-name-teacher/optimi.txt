@@ -1,0 +1,20 @@
+import math
+n = int(input('nhap n: '))
+x = float(input('minute xử lý sp trên 1 công đoạn: '))
+m = int(input('so luong sp can di qua: '))
+lst = []
+
+# tổng thời gian 
+def calc(n,x,m):
+    for y in range(1,m+1):
+        if m % y == 0:
+            t = x * math.sqrt(y) * n * (m/y)
+            lst.append(t)
+        else:
+            t = x * math.sqrt(y) * n * (m/y) + x * math.sqrt(m%y) * n
+            lst.append(t)
+
+    print(lst)
+    lst.sort()
+    print(lst[0])
+calc(n,x,m)
